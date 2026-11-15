@@ -1,10 +1,10 @@
-from src.common.interfaces.repositories.user_repository import IUserRepository
-from src.common.interfaces.business.user_business_management import IUserBusinessManagement
-from src.common.utils.user_constraints import UserConstraints
-from src.common.utils.security_util import SecurityUtil
-from src.common.exceptions import DatabaseError
-from src.common.DTO.response import Response
-from src.common.entities.user import User
+from src.domain.interfaces.repositories.user_repository import IUserRepository
+from src.domain.interfaces.business.user_business_management import IUserBusinessManagement
+from src.domain.utils.user_constraints import UserConstraints
+from src.domain.utils.security_util import SecurityUtil
+from src.domain.exceptions import DatabaseError
+from src.domain.DTO.response import Response
+from src.domain.entities.user import User
 
 class UserBusinessService(IUserBusinessManagement):
     def __init__(self, user_repository: IUserRepository):

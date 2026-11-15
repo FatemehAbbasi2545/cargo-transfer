@@ -1,12 +1,12 @@
-from src.common.interfaces.repositories.cargo_repository import ICargoRepository
-from src.common.interfaces.repositories.cargo_offer_repository import ICargoOfferRepository
-from src.common.interfaces.business.cargo_business_management import ICargoBusinessManagement
-from src.common.exceptions import DatabaseError, PermissionDeniedError
-from src.common.enums import UserRole, TransportType
-from src.common.entities.user import User
-from src.common.entities.cargo import Cargo
-from src.common.entities.cargo_offer import CargoOffer
-from src.common.DTO.response import Response
+from src.domain.interfaces.repositories.cargo_repository import ICargoRepository
+from src.domain.interfaces.repositories.cargo_offer_repository import ICargoOfferRepository
+from src.domain.interfaces.business.cargo_business_management import ICargoBusinessManagement
+from src.domain.exceptions import DatabaseError, PermissionDeniedError
+from src.domain.enums import UserRole, TransportType
+from src.domain.entities.user import User
+from src.domain.entities.cargo import Cargo
+from src.domain.entities.cargo_offer import CargoOffer
+from src.domain.DTO.response import Response
 
 class CargoBusinessService(ICargoBusinessManagement):
     def __init__(self, cargo_repository: ICargoRepository, cargo_offer_repository: ICargoOfferRepository):

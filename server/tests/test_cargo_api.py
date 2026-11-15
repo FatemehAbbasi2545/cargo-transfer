@@ -7,8 +7,8 @@ from fastapi.testclient import TestClient
 
 from src.application.services.business_services.cargo_business_service import CargoBusinessService
 from src.application.services.business_services.user_business_service import UserBusinessService
-from src.common.entities.user import User
-from src.common.exceptions import DatabaseError
+from src.domain.entities.user import User
+from src.domain.exceptions import DatabaseError
 from src.infrastructure.data_access.sqlite_database import SQLiteDatabase
 from src.infrastructure.data_access.sqlite_repository_factory import SQLiteRepositoryFactory
 from src.presentation.api.routes import auth, cargo

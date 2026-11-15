@@ -4,10 +4,10 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, Path
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 
-from src.common.DTO.response import Response
-from src.common.entities.user import User
-from src.common.exceptions import PermissionDeniedError
-from src.common.interfaces.business.cargo_business_management import ICargoBusinessManagement
+from src.domain.DTO.response import Response
+from src.domain.entities.user import User
+from src.domain.exceptions import PermissionDeniedError
+from src.domain.interfaces.business.cargo_business_management import ICargoBusinessManagement
 from src.presentation.api.routes import auth
 from src.presentation.api.schemas import (
     CargoResponse, CargoListResponse, CargoOfferResponse, CargoOfferListResponse,

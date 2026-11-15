@@ -1,4 +1,4 @@
-from src.common.interfaces.repositories.repository_factory import IRepositoryFactory
+from src.domain.interfaces.repositories.repository_factory import IRepositoryFactory
 from src.infrastructure.data_access.sqlite_user_repository import SQLiteUserRepository
 from src.infrastructure.data_access.sqlite_cargo_repository import SQLiteCargoRepository
 from src.infrastructure.data_access.sqlite_cargo_offer_repository import SQLiteCargoOfferRepository

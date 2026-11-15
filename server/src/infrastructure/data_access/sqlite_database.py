@@ -1,11 +1,11 @@
 import sqlite3
 from typing import List, Tuple, Any
 
-from src.common.interfaces.data_access.database_connection import IDatabaseConnection
-from src.common.interfaces.data_access.query_executor import IQueryExecutor
-from src.common.interfaces.data_access.transaction_executor import ITransactionExecutor
-from src.common.exceptions import DatabaseError
-from src.common.enums import QueryType
+from src.domain.interfaces.data_access.database_connection import IDatabaseConnection
+from src.domain.interfaces.data_access.query_executor import IQueryExecutor
+from src.domain.interfaces.data_access.transaction_executor import ITransactionExecutor
+from src.domain.exceptions import DatabaseError
+from src.domain.enums import QueryType
 
 class SQLiteDatabase(IDatabaseConnection, IQueryExecutor, ITransactionExecutor):
     """Singleton: only one instance (and thus one SQLite connection) exists."""

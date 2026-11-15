@@ -27,7 +27,7 @@ class LoginAPITests(unittest.TestCase):
     def test_login_and_register(self):
         # 1) Register a fixture user through the service layer
         from src.presentation.api.routes import auth
-        from src.common.entities.user import User
+        from src.domain.entities.user import User
     
         auth.user_service.register(User(
             name="Test", user_name="apiuser",
