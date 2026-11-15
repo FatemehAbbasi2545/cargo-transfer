@@ -1,8 +1,8 @@
-from src.common.entities.cargo_offer import CargoOffer
-from src.common.enums import QueryType
-from src.common.interfaces.repositories.cargo_offer_repository import ICargoOfferRepository
-from src.common.interfaces.data_access.query_executor import IQueryExecutor
-from src.common.interfaces.data_access.transaction_executor import ITransactionExecutor
+from src.domain.entities.cargo_offer import CargoOffer
+from src.domain.enums import QueryType
+from src.domain.interfaces.repositories.cargo_offer_repository import ICargoOfferRepository
+from src.domain.interfaces.data_access.query_executor import IQueryExecutor
+from src.domain.interfaces.data_access.transaction_executor import ITransactionExecutor
 
 class SQLiteCargoOfferRepository(ICargoOfferRepository):
     _TABLE = "CargoOffer"

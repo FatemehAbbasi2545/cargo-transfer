@@ -1,11 +1,11 @@
 from typing import List
 
-from src.common.entities.user import User
-from src.common.interfaces.repositories.user_repository import IUserRepository
-from src.common.interfaces.data_access.query_executor import IQueryExecutor
-from src.common.interfaces.data_access.transaction_executor import ITransactionExecutor
-from src.common.exceptions import DatabaseError
-from src.common.enums import QueryType
+from src.domain.entities.user import User
+from src.domain.interfaces.repositories.user_repository import IUserRepository
+from src.domain.interfaces.data_access.query_executor import IQueryExecutor
+from src.domain.interfaces.data_access.transaction_executor import ITransactionExecutor
+from src.domain.exceptions import DatabaseError
+from src.domain.enums import QueryType
 
 class SQLiteUserRepository(IUserRepository):
     _TABLE = "User"

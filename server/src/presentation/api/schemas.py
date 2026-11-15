@@ -1,6 +1,6 @@
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
-from src.common.enums import TransportType, UserRole
+from src.domain.enums import TransportType, UserRole
 
 class LoginRequest(BaseModel):
     user_name: str = Field(..., min_length=1, description="Username")

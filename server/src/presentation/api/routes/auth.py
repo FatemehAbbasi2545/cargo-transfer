@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, status
 
-from src.common.DTO.response import Response
-from src.common.interfaces.business.user_business_management import IUserBusinessManagement
+from src.domain.DTO.response import Response
+from src.domain.interfaces.business.user_business_management import IUserBusinessManagement
 from src.presentation.api.schemas import (
     LoginRequest, LoginResponse, RegisterRequest, RegisterResponse,
     UpdatePasswordRequest, UpdatePasswordResponse,
@@ -35,7 +35,7 @@ def login(payload: LoginRequest) -> LoginResponse:
 @router.post("/auth/register", response_model=RegisterResponse, status_code=status.HTTP_201_CREATED)
 def register(payload: RegisterRequest) -> RegisterResponse:
     """Register endpoint — delegates to the existing UserBusinessService."""
-    from src.common.entities.user import User
+    from src.domain.entities.user import User
 
     user = User(
         name=payload.name,

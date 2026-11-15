@@ -1,8 +1,8 @@
-from src.common.entities.cargo import Cargo
-from src.common.interfaces.repositories.cargo_repository import ICargoRepository
-from src.common.interfaces.data_access.query_executor import IQueryExecutor
-from src.common.interfaces.data_access.transaction_executor import ITransactionExecutor
-from src.common.enums import QueryType, TransportType
+from src.domain.entities.cargo import Cargo
+from src.domain.interfaces.repositories.cargo_repository import ICargoRepository
+from src.domain.interfaces.data_access.query_executor import IQueryExecutor
+from src.domain.interfaces.data_access.transaction_executor import ITransactionExecutor
+from src.domain.enums import QueryType, TransportType
 
 class SQLiteCargoRepository(ICargoRepository):
     _TABLE = "Cargo"
